@@ -19,43 +19,9 @@ This project is ideal for AI engineers, researchers, and product teams looking t
 ---
 
 ## Architecture Of The System 
---
+    
 
 
-                        +-----------------------+
-                        |     User Interface    |
-                        | (e.g., API / CLI / UI)|
-                        +-----------+-----------+
-                                    |
-                                    |
-                                    v
-                        +-----------------------+
-                        |   Agent Orchestration |
-                        |   (Agentic RAG logic) |
-                        |                       |
-                        | - agentic_rag.py      |
-                        | - patent_crew.py      |
-                        +-----------+-----------+
-                                    |
-                                    |
-           +------------------------+-------------------------+
-           |                          |                       |
-           v                          v                       v
-+----------------+        +------------------------+   +------------------+
-|  Ingestion &   |        |    Semantic Search     |   | External Tools   |
-| Data Collection|        |   & Embedding Backend  |   | & Integration    |
-|                |        |                        |   |                  |
-| - ingestion.py |        | - embedding.py         |   | - opensearch_client.py |
-| - information_ |        | - vector store (via)   |   | - patent_search_tools.py|
-|   collector.py |        |   external DB (OpenSearch) |                    |
-+----------------+        +------------------------+   +------------------+
-           |                           |
-           |                           |
-           v                           v
-   +-----------------------+   +-----------------------+
-   | Raw Patent / Research |   | Vector Embeddings /   |
-   | / Product Data        |   | Indexed Semantic Store|
-   +-----------------------+   +-----------------------+
 
 
 
